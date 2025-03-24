@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import "tailwindcss" theme(static);
+@import "@nuxt/ui";
+@import "@fortawesome/fontawesome-svg-core/styles.css";
+@theme{
+    --dark: linear-gradient(145deg, #1e2024, #23272b);
+}
+
+:root{
+    --base-theme: #fdbb2e
+}
+
+.bg-theme{
+    background: var(--base-theme);
+}
+*{
+    font-family: Calibri , sans-serif;
+    color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav.aside-menu {
+    .blink-text-menu {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+
+        li {
+            a {
+                position: relative;
+                display: flex;
+
+                span {
+                    position: relative;
+                    overflow: hidden;
+                    transition: 0.6s;
+
+                    .out {
+                        display: inline-flex;
+                    }
+
+                    .in {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        opacity: 0;
+                        transform: translateX(100%);
+                        width: 0;
+                    }
+                }
+
+                &:hover {
+                    span {
+                        .out {
+                            display: inline-flex;
+                            opacity: 0;
+                        }
+
+                        .in {
+                            transform: translateX(0);
+                            opacity: 1;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
