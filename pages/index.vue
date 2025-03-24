@@ -108,13 +108,48 @@ const skills = [
     progress: '35'
   },
 ]
+onMounted(()=>{
+  const screenHeight = window.innerHeight
+  const nav = document.querySelectorAll<HTMLUListElement>('nav.aside-menu ul li')
+  const links = document.querySelectorAll<HTMLLinkElement>('nav.aside-menu ul li a');
+  function addActiveClass(id:string):void{
+    Array.from(nav).forEach(item=>{
+      if(item.getAttribute('id') === id){
+        item.classList.add('active')
+      }
+    })
+  }
+  function removeActiveClass(){
+    Array.from(nav).forEach(item=>item.classList.remove('active'))
+  }
+  document.addEventListener('scroll',(e:Event)=>{
+   const sections =  document.querySelectorAll<HTMLBodyElement>('#home section');
+    Array.from(sections).forEach((item , index)=>{
+      const topElement = item.getBoundingClientRect().top
+      const bottomElement = item.getBoundingClientRect().bottom
+      if (topElement > 0 && topElement < screenHeight) {
+        nav[index].classList.add('active')
+      }
+      if (topElement < 0 || topElement > screenHeight ) {
+        nav[index].classList.remove('active')
+      }
+      if (Math.random()>0.9){
+        console.log(item , topElement , bottomElement)
+      }
+    })
+
+  })
+})
+onBeforeUnmount(()=>{
+  document.removeEventListener( 'scroll',()=>{})
+})
 </script>
 
 <template>
-  <section class="h-full pt-[5%]">
+  <section class="h-full pt-[5%]" id="home">
     <u-container >
       <section id="top">
-        <div class="grid grid-cols-12 items-center gap-y-16 md:gap-y-28 py-[10%]">
+        <div class="grid grid-cols-12 items-center gap-y-16 md:gap-y-28 my-[10%]">
           <div class="content flex flex-col items-center xl:items-start col-span-12 xl:col-span-8  ">
             <div class="flex gap-6 md:gap-7 flex-col items-start justify-center">
               <h1 class=" text-3xl lg:text-4xl xl:text-5xl"> Hi, I'm <strong class="text-4xl lg:text-5xl xl:text-6xl">Eisa
@@ -144,7 +179,7 @@ const skills = [
         <next id="about-me"/>
       </section>
       <section id="about-me">
-        <div class="py-[15%] ">
+        <div class="my-[10%] py-[5%] ">
           <top-title subject="ABOUT ME" subTitle="Some Word About Me" title="Know Me"/>
           <div class="card mt-3">
             <div class="card-body grid lg:grid-cols-3 gap-10">
@@ -182,7 +217,7 @@ const skills = [
         <next id="my-project"/>
       </section>
       <section id="my-project">
-        <div class="py-[15%] ">
+        <div class="my-[10%] py-[5%] ">
           <top-title subject="PROJECTS" sub-title="Participation in development"
                      title="Some development partnership projects"/>
           <div class="mt-[5%] grid grid-cols-12 gap-3.5 md:gap-5">
@@ -193,7 +228,7 @@ const skills = [
         <next id="skills"/>
       </section>
       <section id="skills">
-        <div class="py-[15%] ">
+        <div class="my-[10%] py-[5%] ">
           <top-title subject="skills" title="Things I'm good at" sub-title="My Skills"/>
           <div class="mt-[5%] grid grid-cols-12 gap-5">
             <circle-progres-bar h="120px" w="120px" class="col-span-6 md:col-span-4 lg:col-span-3 2xl:col-span-2"
@@ -204,7 +239,7 @@ const skills = [
         <next id="contact-me"/>
       </section>
       <section id="contact-me">
-        <div class="py-[15%]">
+        <div class="my-[10%] py-[5%]">
 
           <top-title subject="CONTACT" sub-title="Contact Me" title="Let's Get in touch"/>
           <ul class="grid grid-cols-12 gap-3 mt-10">

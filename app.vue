@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-theme">
+  <section class="bg-theme" >
     <!--    <u-container>-->
     <nuxt-layout name="default">
       <main class="min-h-[100vh] grid grid-cols-12 xl:gap-10 ">
@@ -7,7 +7,7 @@
           <nuxt-page/>
         </div>
         <nav class=" aside-menu hidden xl:block col-span-3 " v-if="$route.path == '/'">
-          <ul class="blink-text-menu border-l-3 border-l-stone-800">
+          <ul class="blink-text-menu border-l-3 border-l-[rgba(0,0,0,0.3)]">
             <li ref="list" v-for="(item , index) in navLinks" :key="item.id" class=" first:mt-0 last:mb-0 my-1">
               <u-link ref="links" @click="activeList(index)" :to="`#${item.id}`"
                       class="block cursor-pointer py-3.5 px-5 w-full h-full font-bold text-lg gap-1.5">
@@ -44,12 +44,12 @@ const navLinks = [
     name: 'About Me'
   },
   {
-    id: 'skills',
-    name: 'Skills'
-  },
-  {
     id: 'my-project',
     name: 'Project'
+  },
+  {
+    id: 'skills',
+    name: 'Skills'
   },
   {
     id: 'contact-me',
@@ -96,14 +96,14 @@ nav {
         left: -2px;
         top: 0;
         background-color: rgba(0, 0, 0, 0.05);
-        transition: width 1s linear;
+        transition: width 0.5s linear;
         z-index: -1;
       }
 
       &:hover {
 
         &:after {
-          border-left: 3px solid rgba(0, 0, 0, 1);
+          border-left: 3px solid rgba(0, 0, 0, 0.9);
           width: 100%;
         }
 

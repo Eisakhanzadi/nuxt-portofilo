@@ -12,7 +12,6 @@ const {date, content} = defineProps({
 </script>
 
 <template>
-  <section>
     <div class="card border border-1 px-16 pb-5 pt-5 flex justify-center items-center">
       <div class="card-body flex justify-center items-center">
         <div class="card-text">
@@ -23,7 +22,6 @@ const {date, content} = defineProps({
         </div>
       </div>
     </div>
-  </section>
 </template>
 
 <style scoped>
