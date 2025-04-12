@@ -71,3 +71,17 @@ nav.aside-menu {
 
     }
 }
+.active-effect{
+    span {
+        .out {
+            display: inline-flex !important;
+            opacity: 0 !important;
+        }
+
+        .in {
+            transform: translateX(0) !important;
+            opacity: 1 !important;
+            width: 100% !important;
+        }
+    }
+}
