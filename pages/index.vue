@@ -107,6 +107,14 @@ const skills = [
     name: 'reactjs',
     progress: '35'
   },
+  {
+    name: 'git & github',
+    progress: '70'
+  },
+  {
+    name: 'oop',
+    progress: '70'
+  },
 ]
 onMounted(()=>{
   const screenHeight = window.innerHeight
@@ -123,18 +131,17 @@ onMounted(()=>{
     Array.from(nav).forEach(item=>item.classList.remove('active'))
   }
   document.addEventListener('scroll',(e:Event)=>{
-   const sections =  document.querySelectorAll<HTMLBodyElement>('#home section');
+   const sections =  document.querySelectorAll<HTMLElement>('#home section');
     Array.from(sections).forEach((item , index)=>{
       const topElement = item.getBoundingClientRect().top
       const bottomElement = item.getBoundingClientRect().bottom
       if (topElement > 0 && topElement < screenHeight) {
         nav[index].classList.add('active')
+        links[index].classList.add('active-effect')
       }
       if (topElement < 0 || topElement > screenHeight ) {
         nav[index].classList.remove('active')
-      }
-      if (Math.random()>0.9){
-        console.log(item , topElement , bottomElement)
+        links[index].classList.remove('active-effect')
       }
     })
 
