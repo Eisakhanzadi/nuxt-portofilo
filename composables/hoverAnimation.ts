@@ -1,10 +1,10 @@
 export default function hoverAnimation(items:[]):void{
-    items.forEach(link => {
+    items.forEach((link:any) => {
         let letters = link.textContent.split("")
         link.textContent = ""
-        letters.forEach((letter, i) => {
+        letters.forEach((letter:string, i:number) => {
             i += 1;
-            let span = document.createElement("span");
+            let span = document.createElement("span") as HTMLSpanElement;
             let delay = i / 20;
             if (i % 2 === 0) {
                 delay -= 0.1;
