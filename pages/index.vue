@@ -28,32 +28,42 @@ const projects = [
   {
     id: 3,
     img: elinor,
-    title: 'elinor shop'
+    title: 'atlas mode shop'
   },
   {
     id: 4,
     img: benedito,
-    title: 'benedito shop'
+    title: 'pashik shop'
   },
   {
     id: 5,
     img: elinor,
-    title: 'elinor shop'
+    title: 'shahinbaba shop'
   },
   {
     id: 6,
     img: benedito,
-    title: 'benedito shop'
+    title: 'nini plus shoes shop'
   },
   {
     id: 7,
     img: benedito,
-    title: 'benedito shop'
+    title: 'narin center shop'
   },
   {
     id: 8,
     img: benedito,
-    title: 'benedito shop'
+    title: 'nahidtorabi shop'
+  },
+  {
+    id: 9,
+    img: benedito,
+    title: 'ariya janebi shop'
+  },
+  {
+    id: 10,
+    img: benedito,
+    title: 'ikagok shop'
   },
 ]
 const about = [
