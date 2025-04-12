@@ -29,7 +29,7 @@ const {date, content} = defineProps({
   background-color:var(--base-theme);
   z-index: 3;
   position: relative;
-  width: fit-content;
+  width: 100%;
   &:after{
     content: "";
     width: 100%;

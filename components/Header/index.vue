@@ -45,7 +45,7 @@ watch(()=>route.path , ()=>{
       <nav class="py-5">
         <ul class="nav flex items-center justify-between gap-5 md:text-base">
           <li class="nav-item">
-            <u-link to="/" class="font-semibold ">
+            <u-link to="/" class="font-semibold text-lg ">
               Eisa khanzadi
             </u-link>
           </li>

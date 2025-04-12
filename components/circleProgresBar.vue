@@ -24,6 +24,9 @@ const {number,text,h,w , index} = defineProps({
 const progressBar = ref<HTMLElement>(null)
 const progressNumber = ref(0)
 onMounted(() => {
+counterPercentage(200)
+})
+function counterPercentage(time:number):void{
   setTimeout(()=>{
     const timer = setInterval(() => {
       if (progressNumber.value == number) {
@@ -34,12 +37,12 @@ onMounted(() => {
 
       }
     }, 50)
-  } , index*200)
-})
+  } , index*time)
+}
 </script>
 
 <template>
-  <div class="w-fit">
+  <div class="w-full flex flex-col items-center">
   <div ref="progressBar" id="progress-bar" class="w-32 h-32 relative rounded-full bg-blue-100" :style="{width:w,height:h}">
     <div class="progress-bar-number  flex justify-center items-center rounded-full bg-blue-100 font-bold text-3xl  ">
       <span>{{ progressNumber }} %</span>

@@ -189,8 +189,8 @@ onBeforeUnmount(()=>{
         <div class="my-[10%] py-[5%] ">
           <top-title subject="ABOUT ME" subTitle="Some Word About Me" title="Know Me"/>
           <div class="card mt-3">
-            <div class="card-body grid lg:grid-cols-3 gap-10">
-              <div class="content-about col-span-2 mt-3">
+            <div class="card-body grid grid-cols-3 gap-10">
+              <div class="content-about col-span-3 lg:col-span-2 mt-3">
                 <div>
                   <h1 class="font-bold text-3xl leading-10">I'm Eisa Khanzadi, a Web Developer</h1>
                   <p class="text-lg text-justify">
@@ -215,7 +215,7 @@ onBeforeUnmount(()=>{
                   </ul>
                 </div>
               </div>
-              <div class="col-span-1 flex justify-center items-center">
+              <div class="col-span-3 lg:col-span-1 flex justify-center items-center">
                 <cards-exprice :date="calculateExperience()"/>
               </div>
             </div>
@@ -228,7 +228,7 @@ onBeforeUnmount(()=>{
           <top-title subject="PROJECTS" sub-title="Participation in development"
                      title="Some development partnership projects"/>
           <div class="mt-[5%] grid grid-cols-12 gap-3.5 md:gap-5">
-            <cards-product class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3" v-for="item in projects"
+            <cards-product class="col-span-6 md:col-span-4 lg:col-span-3" v-for="item in projects"
                            :key="item.id" :project="item"/>
           </div>
         </div>
