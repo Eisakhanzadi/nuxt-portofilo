@@ -39,13 +39,14 @@ onMounted(() => {
     }
   });
 })
+// :to="`/product/${project.id}/${separator(project.title)}`"
 </script>
 
 <template>
 
   <article ref="card" class="card bg-white flex flex-col items-center h-full rounded relative overflow-hidden ">
-    <u-link v-if="project" class="flex justify-center h-full"
-            :to="`/product/${project.id}/${separator(project.title)}`">
+    <u-link target="_blank" :to="project.url" v-if="project" class="flex justify-center h-full"
+            >
         <img class=" object-contain w-full h-full " :src="project.img" :alt="project.title">
       <span ref="pin" class="w-2.5 h-2.5 rounded-full block absolute top-2 "></span>
       <div class="card-body overflow-hidden flex justify-center items-end  ">
