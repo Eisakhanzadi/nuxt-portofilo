@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import me from '~/assets/images/profile/me.png'
+import me from '~/assets/images/profile/me.png';
 // start product image
-import elinor from '~/assets/images/products/elinor.png'
-import benedito from '~/assets/images/products/benedito.png'
-import atlas from '~/assets/images/products/atlas.png.png'
-import ika from '~/assets/images/products/ika.png'
-import aria from '~/assets/images/products/aria.png'
-import narin from '~/assets/images/products/narin.png'
-import nini from '~/assets/images/products/nini.png'
-import pa from '~/assets/images/products/pa.png'
-import shahin from '~/assets/images/products/shahin.png'
+import elinor from '~/assets/images/products/elinor.png';
+import benedito from '~/assets/images/products/benedito.png';
+import atlas from '~/assets/images/products/atlas.png';
+import ika from '~/assets/images/products/ika.png';
+import aria from '~/assets/images/products/aria.png';
+import narin from '~/assets/images/products/narin.png';
+import nini from '~/assets/images/products/nini.png';
+import pa from '~/assets/images/products/pa.png';
+import shahin from '~/assets/images/products/shahin.png';
 import TopTitle from "~/components/topTitle.vue";
 
 function calculateExperience() {
@@ -290,17 +290,24 @@ onBeforeUnmount(()=>{
                 <span>09118738301</span>
               </u-link>
             </li>
-            <li class=" col-span-12 sm:col-span-6 xl:col-span-3">
+            <li class=" col-span-12 sm:col-span-6 xl:col-span-2">
               <u-link target="_blank" to="https://t.me/esakhanzadi" class="flex xl:justify-center items-center gap-2.5">
                 <span class="border inline-block p-3.5 rounded-full"><icons-telegram/></span>
                 <span>telegram</span>
               </u-link>
             </li>
-            <li class=" col-span-12 sm:col-span-6 xl:col-span-3">
+            <li class=" col-span-12 sm:col-span-6 xl:col-span-2">
               <u-link target="_blank" to="https://www.linkedin.com/in/esakhanzadi"
                       class="flex xl:justify-center items-center gap-2.5">
                 <span class="border inline-block p-3.5 rounded-full"><icons-linkedin/></span>
                 <span>linkedin</span>
+              </u-link>
+            </li>
+            <li class=" col-span-12 sm:col-span-6 xl:col-span-2">
+              <u-link target="_blank" to="https://github.com/Eisakhanzadi"
+                      class="flex xl:justify-center items-center gap-2.5">
+                <span class="border inline-block p-3.5 rounded-full"><icons-github/></span>
+                <span>github</span>
               </u-link>
             </li>
           </ul>
