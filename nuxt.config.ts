@@ -3,6 +3,9 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
     compatibilityDate: '2024-11-01',
+    features: {
+        inlineStyles: false,
+    },
     devtools: {enabled: true},
     css: ['~/assets/styles/main.css', '@fortawesome/fontawesome-svg-core/styles.css'],
     modules: ['@nuxt/ui', '@vesp/nuxt-fontawesome'],
