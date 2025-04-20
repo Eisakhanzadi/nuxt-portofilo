@@ -3,6 +3,13 @@ import me from '~/assets/images/profile/me.png'
 // start product image
 import elinor from '~/assets/images/products/elinor.png'
 import benedito from '~/assets/images/products/benedito.png'
+import atlas from '~/assets/images/products/atlas.png.png'
+import ika from '~/assets/images/products/ika.png'
+import aria from '~/assets/images/products/aria.png'
+import narin from '~/assets/images/products/narin.png'
+import nini from '~/assets/images/products/nini.png'
+import pa from '~/assets/images/products/pa.png'
+import shahin from '~/assets/images/products/shahin.png'
 import TopTitle from "~/components/topTitle.vue";
 
 function calculateExperience() {
@@ -18,52 +25,62 @@ const projects = [
   {
     id: 1,
     img: elinor,
-    title: 'elinor shop'
+    title: 'elinor shop',
+    url:"https://elinorboutique.com/"
   },
   {
     id: 2,
     img: benedito,
-    title: 'benedito shop'
+    title: 'benedito shop',
+    url:"https://benedito.ir/"
   },
   {
     id: 3,
-    img: elinor,
-    title: 'atlas mode shop'
+    img: atlas,
+    title: 'atlas mode shop',
+    url:"https://atlasmode.ir/"
   },
   {
     id: 4,
-    img: benedito,
-    title: 'pashik shop'
+    img: pa,
+    title: 'pashik shop',
+    url:"https://pashikshoes.com/"
   },
   {
     id: 5,
-    img: elinor,
-    title: 'shahinbaba shop'
+    img: shahin,
+    title: 'shahinbaba shop',
+    url:"http://shahinbaba.ir/"
   },
   {
     id: 6,
-    img: benedito,
-    title: 'nini plus shoes shop'
+    img: nini,
+    title: 'nini plus shoes shop',
+    url:"https://niniplusshoes.com/"
   },
   {
     id: 7,
-    img: benedito,
-    title: 'narin center shop'
+    img: narin,
+    title: 'narin center shop',
+    url:"https://narincenter.com/"
   },
   {
     id: 8,
     img: benedito,
-    title: 'nahidtorabi shop'
+    title: 'nahidtorabi shop',
+    url:"http://nahidtorabi.com/"
   },
   {
     id: 9,
-    img: benedito,
-    title: 'ariya janebi shop'
+    img: aria,
+    title: 'ariya janebi shop',
+    url:"https://ariyajanebi.ir/"
   },
   {
     id: 10,
-    img: benedito,
-    title: 'ikagok shop'
+    img: ika,
+    title: 'ikagok shop',
+    url:"https://ikagok.com/"
   },
 ]
 const about = [
