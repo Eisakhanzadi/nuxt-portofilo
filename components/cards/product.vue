@@ -50,7 +50,7 @@ onMounted(() => {
         <img class=" object-contain w-full h-full " :src="project.img" :alt="project.title">
       <span ref="pin" class="w-2.5 h-2.5 rounded-full block absolute top-2 "></span>
       <div class="card-body overflow-hidden flex justify-center items-end  ">
-        <h3 class="mb-5 !text-white text-lg font-bold capitalize">{{ project.title }}</h3>
+        <h3 class="mb-5 text-warning text-lg font-bold capitalize">{{ project.title }}</h3>
       </div>
     </u-link>
   </article>
@@ -68,24 +68,30 @@ onMounted(() => {
 
   .card-body {
     height: 0;
-    transition: all 0.3s 0.2s;
+    transition: all 0.5s 0.2s;
     position: absolute;
     bottom: 0;
     right: 0;
     width: 100%;
+    letter-spacing: 1px;
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
     opacity: 1;
 
     h3 {
       z-index: 3;
+      opacity: 0;
+      transition: opacity 0.2s 0.3s;
     }
   }
 
   &:hover .card-body {
-    transition: all ease 0.3s;
+    transition: all ease 0.5s;
     height: 100%;
     opacity: 1;
-
+    h3{
+      opacity: 1;
+      transition: opacity 0.3s 0.3s;
+    }
   }
 }
 

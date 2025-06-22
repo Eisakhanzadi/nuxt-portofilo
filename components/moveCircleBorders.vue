@@ -41,7 +41,7 @@ img:hover ~ div {
 }
 .image-container{
   border-radius: 50%;
-  border: 2px solid #000;
+  border: 2px solid var(--base-gray);
   span{
    position: absolute;
    width: 100%;
@@ -52,7 +52,7 @@ img:hover ~ div {
      left: 0;
      z-index: 1;
      border: transparent;
-     border-top: 1px solid #000;
+     border-top: 1px solid var(--base-gray);
      &:first-child{
        animation: linear wave-top  2.2s  infinite  forwards;
      }
@@ -71,7 +71,7 @@ img:hover ~ div {
      left: 0;
      z-index: 1;
      border: transparent;
-     border-bottom: 1px solid #000;
+     border-bottom: 1px solid var(--base-gray);
      &:first-child{
        animation: linear wave-bottom  2.2s  infinite  forwards;
      }

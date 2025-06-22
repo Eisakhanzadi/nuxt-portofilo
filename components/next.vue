@@ -9,8 +9,8 @@ const {id} = defineProps({
 
 <template>
 <nuxt-link :to="`#${id}`" class="flex items-baseline relative w-fit pr-6">
-  <p class="capitalize  text-xl font-semibold  ">next chapter </p>
-  <icons-arrow/>
+  <p class="capitalize text-warning text-xl font-semibold  ">next chapter </p>
+  <icons-arrow class="text-warning"/>
 </nuxt-link>
 </template>
 

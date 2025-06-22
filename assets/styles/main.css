@@ -7,21 +7,38 @@
 }
 
 :root{
-    --base-theme: #fdbb2e
+    --base-theme: #222831;
+    --base-gray:#a5acb3;
+    --base-white:#fff;
+    --base-warning:#fdbb2e;
+    --base-dark:#1A1D24;
 }
-
 .bg-theme{
     background: var(--base-theme);
 }
 *{
     font-family: Calibri , sans-serif;
-    color: black;
+    /*color: black;*/
 }
 
 html {
     scroll-behavior: smooth;
 }
-
+.text-white{
+    color: var(--base-white);
+}
+.text-warning{
+    color: var(--base-warning);
+}
+.text-gray{
+    color: var(--base-gray);
+}
+.bg-warning{
+    background: var(--base-warning);
+}
+.bg-white{
+    background: var(--base-white);
+}
 nav.aside-menu {
     .blink-text-menu {
         display: flex;

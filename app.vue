@@ -10,7 +10,7 @@
           <ul class="blink-text-menu border-l-3 border-l-[rgba(0,0,0,0.3)]">
             <li ref="list" v-for="(item , index) in navLinks" :key="item.id" class=" first:mt-0 last:mb-0 my-1">
               <u-link ref="links" @click="activeList(index)" :to="`#${item.id}`"
-                      class="block cursor-pointer py-3.5 px-5 w-full h-full font-bold text-lg gap-1.5">
+                      class="block text-white cursor-pointer py-3.5 px-5 w-full h-full font-bold text-lg gap-1.5">
                 {{ index + 1 < 10 ? '0' + (index + 1) : index + 1 }} {{ item.name }}
 
               </u-link>
@@ -103,7 +103,7 @@ nav {
       &:hover {
 
         &:after {
-          border-left: 3px solid rgba(0, 0, 0, 0.9);
+          border-left: 3px solid var(--base-warning);
           width: 100%;
         }
 
@@ -116,7 +116,7 @@ nav {
 
 .active {
   &:after {
-    border-left: 3px solid rgba(0, 0, 0, 1);
+    border-left: 3px solid var(--base-warning);
     width: 100%;
   }
 }

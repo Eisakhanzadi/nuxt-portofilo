@@ -33,7 +33,7 @@ function counterPercentage(time:number):void{
         clearInterval(timer)
       } else {
         progressNumber.value += 1
-        progressBar.value.style.background = `conic-gradient(#000 ${progressNumber.value}% 0%, #fff 0% 100%)`
+        progressBar.value.style.background = `conic-gradient(var(--base-warning) ${progressNumber.value}% 0%, rgba(0,0,0,0.2) 0% 100%)`
 
       }
     }, 50)
@@ -44,12 +44,12 @@ function counterPercentage(time:number):void{
 <template>
   <div class="w-full flex flex-col items-center">
   <div ref="progressBar" id="progress-bar" class="w-32 h-32 relative rounded-full bg-blue-100" :style="{width:w,height:h}">
-    <div class="progress-bar-number  flex justify-center items-center rounded-full bg-blue-100 font-bold text-3xl  ">
+    <div class="progress-bar-number  flex justify-center items-center rounded-full bg-blue-100 font-bold text-3xl text-white ">
       <span>{{ progressNumber }} %</span>
     </div>
   </div>
     <div class="flex justify-center mt-5">
-      <u-button class="rounded-full block border border-black bg-transparent px-5 py-2 hover:!text-white hover:bg-black capitalize">
+      <u-button class="rounded-full text-white font-bold block border border-black bg-transparent px-5 py-2 hover:!text-white hover:bg-black capitalize">
         {{ text }}
       </u-button>
     </div>

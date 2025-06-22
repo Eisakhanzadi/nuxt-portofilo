@@ -12,13 +12,13 @@ const {date, content} = defineProps({
 </script>
 
 <template>
-    <div class="card border border-1 px-16 pb-5 pt-5 flex justify-center items-center">
+    <div class="card border-[var(--base-gray)] border-1 px-16 pb-5 pt-5 flex justify-center items-center">
       <div class="card-body flex justify-center items-center">
         <div class="card-text">
-          <div class="number">
+          <div class="number text-warning">
             <span class="block">{{ date }}</span>
           </div>
-          <p>{{ content }}</p>
+          <p class="text-warning">{{ content }}</p>
         </div>
       </div>
     </div>
@@ -37,7 +37,7 @@ const {date, content} = defineProps({
     position: absolute;
     top: 0;
     left: 0;
-    border:1px solid #000;
+    border:1px solid var(--base-gray);
     transform: rotate(2deg);
     transform-origin: center;
     background-color: transparent;
@@ -51,7 +51,7 @@ const {date, content} = defineProps({
     position: absolute;
     top: 0;
     left: 0;
-    border:1px solid #000;
+    border:1px solid var(--base-gray);
     transform: rotate(-2deg);
     transform-origin: center;
     background-color: transparent;

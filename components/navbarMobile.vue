@@ -3,7 +3,7 @@ const emit = defineEmits(['close'])
 const {background} = defineProps({
   background:{
     type:String,
-    default:'rgb(255, 214, 90)'
+    default:'var(--base-theme)'
   },
   links:{
     type:Array ,
@@ -22,11 +22,11 @@ function closeModal(){
 </script>
 
 <template>
-<div class="modal-backdrop" :style="{background:background}" >
+<div class="modal-backdrop" >
   <nav class="w-full h-full flex items-center justify-center aside-menu" @click.self="closeModal">
     <ul v-if="links?.length > 0" class="flex flex-col blink-text-menu">
       <li  v-for="(item , index) in links" :key="item.id" >
-        <u-link class="font-semibold py-2.5 my-1 inline-block" active-Class="active-link" @click="closeModal" :to="`#${item.id}`" > {{ index+1 < 10 ? '0'+(index+1) : index }} {{ item.name }}</u-link>
+        <u-link class="font-semibold py-2.5 my-1 inline-block !text-white" active-Class="active-link" @click="closeModal" :to="`#${item.id}`" > {{ index+1 < 10 ? '0'+(index+1) : index }} {{ item.name }}</u-link>
       </li>
     </ul>
   </nav>
@@ -41,6 +41,7 @@ function closeModal(){
   height: 100vh;
   width: 100%;
   z-index: 10;
+  background-color:v-bind(background);
   nav{
     backdrop-filter: blur(3px) !important;
   }

@@ -45,7 +45,7 @@ watch(()=>route.path , ()=>{
       <nav class="py-5">
         <ul class="nav flex items-center justify-between gap-5 md:text-base">
           <li class="nav-item">
-            <u-link to="/" class="font-semibold text-lg ">
+            <u-link to="/" class="font-semibold text-lg text-white">
               Eisa khanzadi
             </u-link>
           </li>
@@ -88,10 +88,12 @@ li {
   from {
     transform: translateY(-100%);
     backdrop-filter: blur(0);
+    background: transparent;
   }
   to {
     transform: translateY(0);
     backdrop-filter: blur(3px);
+    background: rgba(0,0,0,0.5);
   }
 }
 
@@ -121,7 +123,7 @@ li {
   left: 0;
   width: 100%;
   height: 5px;
-  background-color: #000;
+  background-color: var(--base-white);
 }
 
 #menu-label:before,
@@ -148,7 +150,7 @@ li {
   top: 5px;
   right: 0;
   left: 0;
-  color: #000;
+  color: var(--base-white);
   font-size: 12px;
   font-weight: bold;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;

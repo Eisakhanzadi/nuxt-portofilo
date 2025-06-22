@@ -7,9 +7,9 @@ const {title , subject , subTitle} = defineProps({
 </script>
 
 <template>
-  <div class="title p-10 border-l-[3px] border-[rgba(0,0,0,0.5)]">
-    <span class="">{{ subject }}</span>
-    <div>
+  <div class="title p-10 border-l-[3px] border-[var(--base-warning)]">
+    <span class="!text-white">{{ subject }}</span>
+    <div class="text-gray">
       <div><h4>{{ title }}</h4></div>
       <div><h2>{{ subTitle }}</h2></div>
     </div>
