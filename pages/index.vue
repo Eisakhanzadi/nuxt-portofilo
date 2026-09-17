@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import me from '~/assets/images/profile/me.png';
+import me from '~/assets/images/profile/me.webp';
 // start product image
 import elinor from '~/assets/images/products/elinor.png';
 import benedito from '~/assets/images/products/benedito.png';
