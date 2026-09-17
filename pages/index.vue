@@ -221,8 +221,8 @@ onBeforeUnmount(() => {
               <button>
                 <a download href="/Cv/Eisa_khanzadi_persian.pdf" class="btn cursor-pointer px-2 mx-1 py-1 border bg-warning border-[var(--base-warning)] rounded-full hover:!bg-transparent hover:!text-white  transition duration-200 ease-ease text-sm">Fa</a>
               </button>
-              <button disabled class="opacity-50">
-                <a class="btn px-2 mx-1 py-1 border bg-warning border-[var(--base-warning)] rounded-full  transition duration-200 ease-ease text-sm">En</a>
+              <button>
+                <a download href="/Cv/Eisa_khanzadi_English.pdf" class="btn px-2 mx-1 py-1 border bg-warning border-[var(--base-warning)] rounded-full  transition duration-200 ease-ease text-sm">En</a>
               </button>
             </div>
           </div>
